@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<h:head>
+	<style type="text/css">
+body{
+   background-image: linear-gradient(to right, red , yellow);
+   font-family:"Times New Roman",Ties, Serif;
+   text-align:center;
+   }
+table{
+    margin-left:550px;
+}   
+   
+</style>
+		<title>User Data</title>
+	</h:head>
+	<h:body>
+		<h2>Data Table Example</h2>
+	
+		    <h3>Add Student</h3>
+		    <table>
+		       <tr>
+		          <td>Meter Id:</td>
+		          <td><h:inputText value="#{data.meterID}" /></td>
+		       </tr>
+		        <tr>
+		          <td>Current Meter Reading:</td>
+		          <td><h:inputText value="#{data.currMeterReading}" /></td>
+		       </tr>
+		        <tr>
+		          <td>Previous Meter Reading:</td>
+		          <td><h:inputText value="#{data.prevMeterReading}" /></td>
+		       </tr>
+		        <tr>
+		          <td>Zone:</td>
+		          <td><h:inputText value="#{data.zone}" /></td>
+		       </tr>
+		       
+		       <tr>
+		          <td></td>
+		          <td><h:commandButton value="Add Consumer" action="#{data.addConsumer}"/></td>
+		       </tr>
+		      
+		    </table>
+		    
+		     <h:form>
+		       <h:commandButton value="Show Consumer Details" action="consdata.xhtml" />
+		       </h:form>
+		       
+		    
+	</h:body>
+	
+</html>

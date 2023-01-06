@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<h:head>
+		<title>User Data</title>
+		<style type="text/css">
+body{
+   background-image: linear-gradient(to right, red , yellow);
+   font-family:"Times New Roman",Ties, Serif;
+   text-align:center;
+   }
+table{
+    margin-left:550px;
+}   
+   
+</style>
+	</h:head>
+	<h:body>
+		<h2>Data Table Example</h2>
+		<h:form>
+		    <h:dataTable value="#{data.consumers}" var="consumers">
+		         <h:column>
+		             <f:facet name="header">NAME</f:facet>
+		             #{consumers.meterID}
+		         </h:column>
+		         <h:column>
+		             <f:facet name="header">CLASS</f:facet>
+		             #{consumers.currMeterReading}
+		         </h:column>
+		         <h:column>
+		             <f:facet name="header">ROLLNO</f:facet>
+		             #{consumers.prevMeterReading}
+		         </h:column>
+		         <h:column>
+		             <f:facet name="header">AGE</f:facet>
+		             #{consumers.zone}
+		         </h:column>
+		    </h:dataTable>
+		    
+		    <hr/>
+		    <h3>Add Student</h3>
+		    <table>
+		       <tr>
+		          <td>Meter Id:</td>
+		          <td><h:inputText value="#{data.meterID}" /></td>
+		       </tr>
+		        <tr>
+		          <td>Current Meter Reading:</td>
+		          <td><h:inputText value="#{data.currMeterReading}" /></td>
+		       </tr>
+		        <tr>
+		          <td>Previous Meter Reading:</td>
+		          <td><h:inputText value="#{data.prevMeterReading}" /></td>
+		       </tr>
+		        <tr>
+		          <td>Zone:</td>
+		          <td><h:inputText value="#{data.zone}" /></td>
+		       </tr>
+		       
+		       <tr>
+		          <td></td>
+		          <td><h:commandButton value="Add Consumer" action="#{data.addConsumer}"/></td>
+		       </tr>
+		      
+		    </table>
+		    <h:form>
+		       <h:commandButton value="Show Details Details" action="output.xhtml" />
+		       </h:form>
+		    
+		    
+		    
+		    
+		</h:form>
+	</h:body>
+	
+</html>

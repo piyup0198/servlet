@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jstl/core">
+	
+	<h:head>
+		<title>Home Page</title>
+		<style type="text/css">
+body{
+   background-image: linear-gradient(to right, red , yellow);
+   font-family:"Times New Roman",Ties, Serif;
+   text-align: center;
+   }
+table{
+    margin-left:550px;
+}   
+   
+</style>
+	</h:head>
+	<h:body>
+		<h3>Home Page!</h3>
+		<h2>Meter ID: <h:outputText value="#{data.meterID}"/></h2>
+		<h2>Zone: <h:outputText value="#{data.zone}"/></h2>
+		<h2>Current Meter Rd: <h:outputText value="#{data.currMeterReading}"/></h2>
+		<h2>Previous Meter Rd <h:outputText value="#{data.prevMeterReading}"/></h2>
+		<h2>Units Consumed: <h:outputText value="#{data.currMeterReading - data.prevMeterReading}"/></h2>
+	  
+	</h:body>
+	
+</html>
